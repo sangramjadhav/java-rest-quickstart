@@ -22,7 +22,7 @@ public class BloggingResourceV2 implements BloggingService {
 
     @Override
     public List<Post> getPosts() {
-        List<BlogPost> posts = service.getPosts();
+        List<BlogPost> posts = service.getAllPosts();
         List<Post> dtoPosts = new ArrayList<Post>(posts.size());
         for (BlogPost blogPost : posts) {
             dtoPosts.add(mapper.map(blogPost, Post.class));

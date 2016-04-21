@@ -8,7 +8,9 @@ import java.util.List;
  */
 public interface BloggingService {
 
-    List<BlogPost> getPosts();
+    List<BlogPost> getAllPosts();
+
+    List<BlogPost> getPosts(int limit);
 
     BlogPost getPost(int id);
 
